@@ -19,11 +19,19 @@
 
     
 var searchElem = [];
+var latitude1 = [];
+var longitude1 = [];
+
    
    
    
 $('#submit').click (function() {
 
+    
+    var latitude = [];
+    var longitude = [];
+latitude1 = latitude
+    longitude1 = longitude
     // Save the City Name to Local Storage
         event.preventDefault();
 
@@ -45,17 +53,40 @@ $('#submit').click (function() {
                         url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                         type: "GET",
                         dataType:"jsonp",
-                        success : function (data) {
+                    }).then(function (data) {
                             console.log (data);
-                            var widget = show(data);
+                            var widget = show(data),
 
+                            //store coordinates into locationElem to use for UVI Ajax function
+                            latitude= data.coord.lat
+                            longitude = data.coord.lon
+
+                            console.log(latitude)
+                            console.log(longitude)
                             $("#show").html(widget);
 
-                            $("city").val('');
+                            // $("city").val('');
+                    }).then(function(data3) {
+                        console.log(latitude)
+                        
+                    // ajax call for UVI index   
+                    $.ajax ({
+                        url: 'http://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
+                        
+                        type: "GET",
+                        dataType:"json",
+                        success : function (data2) {
+                        console.log (data2);
+                            
+                        var widget1 = show2(data2);
+
+                        $("#show3").html(widget1);
+
+                        $("uvi").val('');
                         }
-                                       
-                   
-                    })
+                    })});
+
+                    //ajax call for 5 day forecast
                     $.ajax ({
                         url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                         type: "GET",
@@ -68,21 +99,30 @@ $('#submit').click (function() {
 
                             $("5daycity").val('');
                         }
-                                       
+                    })
+                    // // http://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659&lon=51.51&lat=-0.13
                    
-                    });
                 }else{
                     $("#error").html('Field cannot be empty');
 
                     
                 }
-});
+                
+
+
 
 
 function show (data) {
+    latitude= data.coord.lat
+    longitude = data.coord.lon
     return "<h3><strong>Weather</strong>: " + data.weather[0].main +"<h3>" +
-            "<h3><strong>Description</strong>: " + data.weather[0].description +"<h3>" +
-            "<h3><strong>Temperature</strong>: " + data.weather[0].main +"<h3>";
+    "<h3><strong>icon</strong>: " + data.weather[0].icon + ".png" +"<h3>" +
+    "<h3><strong>Location</strong>: " + data.name +"<h3>" +
+    "<h3><strong>Date</strong>: " + data.weather[0].main +"<h3>" +
+    "<h3><strong>Temperature</strong>: " + data.weather[0].main +"<h3>" +
+    "<h3><strong>Humidity</strong>: " + data.weather[0].main +"<h3>" +
+            "<h3><strong>Wind Speed</strong>: " + data.weather[0].description +"<h3>" +
+            "<h3><strong>UV Index</strong>: " + data.weather[0].main +"<h3>";
     }
 
                
@@ -95,7 +135,7 @@ function show2 (data1) {
            
     }
  
-// run this function whe user clicks saved city
+// run this function whe user clicks previously searched city
 
 $('.saved').click (function() {
     // Save the City Name to Local Storage
@@ -107,41 +147,63 @@ $('.saved').click (function() {
         console.log(city)
     
         if (city !== '') {
-                $.ajax ({
-                    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
-                    type: "GET",
-                    dataType:"jsonp",
-                    success : function (data) {
-                        console.log (data);
-                        var widget = show(data);
+            $.ajax ({
+                url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                type: "GET",
+                dataType:"jsonp",
+            }).then(function (data) {
+                    console.log (data);
+                    var widget = show(data),
 
-                        $("#show").html(widget);
+                    //store coordinates into locationElem to use for UVI Ajax function
+                    latitude= data.coord.lat
+                    longitude = data.coord.lon
 
-                        $("city").val('');
-                    }
-                                   
-               
-                })
-                $.ajax ({
-                    url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
-                    type: "GET",
-                    dataType:"jsonp",
-                    success : function (data1) {
-                        console.log (data1);
-                        var widget1 = show2(data1);
+                    console.log(latitude)
+                    console.log(longitude)
+                    $("#show").html(widget);
 
-                        $("#show2").html(widget1);
-
-                        $("5daycity").val('');
-                    }
-                                   
-               
-                });
-            }else{
-                $("#error").html('Field cannot be empty');
-
+                    // $("city").val('');
+            }).then(function(data3) {
+                console.log(latitude)
                 
-            }
-});
+            // ajax call for UVI index   
+            $.ajax ({
+                url: 'http://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
+                
+                type: "GET",
+                dataType:"json",
+                success : function (data2) {
+                console.log (data2);
+                    
+                var widget1 = show2(data2);
 
-    
+                $("#show3").html(widget1);
+
+                $("uvi").val('');
+                }
+            })});
+
+            //ajax call for 5 day forecast
+            $.ajax ({
+                url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                type: "GET",
+                dataType:"jsonp",
+                success : function (data1) {
+                    console.log (data1);
+                    var widget1 = show2(data1);
+
+                    $("#show2").html(widget1);
+
+                    $("5daycity").val('');
+                }
+            })
+            // // http://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659&lon=51.51&lat=-0.13
+           
+        }else{
+            $("#error").html('Field cannot be empty');
+
+            
+        }
+});
+});
