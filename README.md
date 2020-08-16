@@ -10,3 +10,7 @@ I am using the on click function to grab the input search and list it on the scr
 August 19, 2020
 
 I struggled a lot with finding the ID for the function pull but managed to get it working.
+
+Fixed the third Ajax function.
+
+I also fixed the 5 day forecast adding each element (date, icon, temp, humidity).  Now I need to replicat the initial load when the "submit" button is hit. 
