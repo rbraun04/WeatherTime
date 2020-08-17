@@ -290,7 +290,7 @@ var longitude1 = [];
    
    
    
-$('#submit').click (function() {
+$('#submit').click (function(event) {
 
     
     var latitude = [];
@@ -300,9 +300,11 @@ $('#submit').click (function() {
     // Save the City Name to Local Storage
         event.preventDefault();
 
+        searchElem = JSON.parse(localStorage.getItem("User"))
+
         searchElem.push(cityElem.value)
         localStorage.setItem("User", JSON.stringify(searchElem));
-        $(".searchhistory").append("<div><a class = 'todaysaved' id='" + cityElem.value + "'> " + cityElem.value +  "</a></div>");
+        $(".searchhistory").append("<div><a class = 'saved' id='" + cityElem.value + "'> " + cityElem.value +  "</a></div>");
         
         
         // var a = $(".saved");
@@ -603,13 +605,9 @@ function show2 (data1) {
 // run this function whe user clicks previously searched city
 });
 
-$('.todaysaved').click(function()  {
 
-    consolelog(this.id);
-    prompt(hello)
-})
 
-$('.saved').click (function() {
+$(document).on ("click",".saved", function() {
     console.log(this.id);
     var city = this.id;
         console.log(city)
