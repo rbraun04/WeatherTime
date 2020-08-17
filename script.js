@@ -83,8 +83,21 @@
 
                         $("#uvIndex").html(widget1);
                         
+                        if ( data2.value > 3)
+                        $("#uvIndex").css("backgroundColor", "yes")
+
+                        $("uvi").val('');
+                        
                         if ( data2.value > 5)
+                        $("#uvIndex").css("backgroundColor", "orange")
+
+                        $("uvi").val('');
+                        if ( data2.value > 8)
                         $("#uvIndex").css("backgroundColor", "red")
+
+                        $("uvi").val('');
+                        if ( data2.value > 11)
+                        $("#uvIndex").css("backgroundColor", "violet")
 
                         $("uvi").val('');
                         }
@@ -356,8 +369,21 @@ $('#submit').click (function() {
 
                         $("#uvIndex").html(widget1);
                         
+                        if ( data2.value > 3)
+                        $("#uvIndex").css("backgroundColor", "yes")
+
+                        $("uvi").val('');
+                        
                         if ( data2.value > 5)
+                        $("#uvIndex").css("backgroundColor", "orange")
+
+                        $("uvi").val('');
+                        if ( data2.value > 8)
                         $("#uvIndex").css("backgroundColor", "red")
+
+                        $("uvi").val('');
+                        if ( data2.value > 11)
+                        $("#uvIndex").css("backgroundColor", "violet")
 
                         $("uvi").val('');
                         }
@@ -644,11 +670,25 @@ $('.saved').click (function() {
 
                         $("#uvIndex").html(widget1);
                         
+                        if ( data2.value > 3)
+                        $("#uvIndex").css("backgroundColor", "yes")
+
+                        $("uvi").val('');
+                        
                         if ( data2.value > 5)
+                        $("#uvIndex").css("backgroundColor", "orange")
+
+                        $("uvi").val('');
+                        if ( data2.value > 8)
                         $("#uvIndex").css("backgroundColor", "red")
 
                         $("uvi").val('');
+                        if ( data2.value > 11)
+                        $("#uvIndex").css("backgroundColor", "violet")
+
+                        $("uvi").val('');
                         }
+                        
                     })});
 
                     //ajax call for 5 day forecast
