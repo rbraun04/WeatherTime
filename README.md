@@ -20,3 +20,5 @@ Fixed the third Ajax function.
 I also fixed the 5 day forecast adding each element (date, icon, temp, humidity).  Now I need to replicat the initial load when the "submit" button is hit. 
 
 I am still struggling with this assignment particularly the "submit" buttons that are generated are not reactive and I am not entirely sure why.  
+
+**Two functionality issues - links for search buttons dont work for newly entered submits (previous loads work) and push to storage erases past searches.**
