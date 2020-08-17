@@ -56,10 +56,16 @@
                         var daywindspeed = data.wind.speed
                         var iconcode = data.weather[0].icon;
                         var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-                        $('#wicon1').attr('src', iconurl);
+                        $('#wicon').attr('src', iconurl);
                             
 
-                        $("#show").html(daytemp + formattedTime + name +dayhumidity + daywindspeed)
+                        // $("#show").html(daytemp + formattedTime + name +dayhumidity + daywindspeed)
+
+                        $("#daytemp").html(daytemp + "°F")
+                        $("#name").html(name)
+                        $("#daydate").html(formattedTime)
+                        $("#dayhumidity").html("Humidity = " + dayhumidity + "%")
+                        $("#daywindspeed").html("Windspeed = " + daywindspeed + "MPH")
                         
                     }).then(function(data3) {
                         console.log(latitude)
@@ -103,7 +109,7 @@
                     const [{ value: month1 },,{ value: day1 },,{ value: year1 }] = dateTimeFormat1 .formatToParts(date1 ) 
     
                     console.log(`${day1}-${month1}-${year1 }`)
-                    var day1date = `${day1}👠${month1}👢${year1}`  
+                    var day1date = `${day1}/${month1}/${year1}`  
 
                         
                             
@@ -116,88 +122,98 @@
                     $('#wicon1').attr('src', iconurl1);
                             
 
-                    $("#day1").html(day1temp + day1date +day1humidity + day1windspeed)
+                    $("#day1temp").html(day1temp + "°F")
+                    $("#day1date").html(day1date)
+                    $("#day1humidity").html("Humidity = " + day1humidity + "%")
+                    
+                    
         // day 2:  
-                    const date2 = new Date(data1.list[2].dt_txt)
+                    const date2 = new Date(data1.list[12].dt_txt)
                     const dateTimeFormat2 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month2 },,{ value: day2 },,{ value: year2 }] = dateTimeFormat2 .formatToParts(date2 ) 
     
                     console.log(`${day2}-${month2}-${year2 }`)
-                    var day2date = `${day2}👠${month2}👢${year2}`  
+                    var day2date = `${day2}/${month2}/${year2}`  
 
                         
                             
                             
-                    var day2temp = data1.list[2].main.temp
-                    var day2humidity = data1.list[2].main.humidity
-                    var day2windspeed = data1.list[2].wind.speed
-                    var iconcode2 = data1.list[2].weather[0].icon;
+                    var day2temp = data1.list[12].main.temp
+                    var day2humidity = data1.list[12].main.humidity
+                    var day2windspeed = data1.list[12].wind.speed
+                    var iconcode2 = data1.list[12].weather[0].icon;
                     var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
                     $('#wicon2').attr('src', iconurl2);
                             
 
-                    $("#day2").html(day2temp + day2date +day2humidity + day2windspeed)
+                    $("#day2temp").html(day2temp + "°F")
+                    $("#day2date").html(day2date)
+                    $("#day2humidity").html("Humidity = " + day2humidity + "%")
+                    
         // day 3:
-                    const date3 = new Date(data1.list[3].dt_txt)
+                    const date3 = new Date(data1.list[20].dt_txt)
                     const dateTimeFormat3 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month3 },,{ value: day3 },,{ value: year3 }] = dateTimeFormat3 .formatToParts(date3 ) 
     
                     console.log(`${day3}-${month3}-${year3}`)
-                    var day3date = `${day3}👠${month3}👢${year3}`  
+                    var day3date = `${day3}/${month3}/${year3}`  
 
                         
                             
                             
-                    var day3temp = data1.list[3].main.temp
-                    var day3humidity = data1.list[3].main.humidity
-                    var day3windspeed = data1.list[3].wind.speed
-                    var iconcode3 = data1.list[3].weather[0].icon;
+                    var day3temp = data1.list[20].main.temp
+                    var day3humidity = data1.list[20].main.humidity
+                    var day3windspeed = data1.list[20].wind.speed
+                    var iconcode3 = data1.list[20].weather[0].icon;
                     var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
                     $('#wicon3').attr('src', iconurl3);
                             
 
-                    $("#day3").html(day3temp + day3date +day3humidity + day3windspeed)
+                    $("#day3temp").html(day3temp + "°F")
+                    $("#day3date").html(day3date)
+                    $("#day3humidity").html("Humidity = " + day3humidity + "%")
           // day 4:
-                    const date4 = new Date(data1.list[4].dt_txt)
+                    const date4 = new Date(data1.list[28].dt_txt)
                     const dateTimeFormat4 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month4 },,{ value: day4 },,{ value: year4 }] = dateTimeFormat4 .formatToParts(date4 ) 
     
                     console.log(`${day4}-${month4}-${year4}`)
-                    var day4date = `${day4}👠${month4}👢${year4}`  
+                    var day4date = `${day4}/${month4}/${year4}`  
 
                         
                             
                             
-                    var day4temp = data1.list[4].main.temp
-                    var day4humidity = data1.list[4].main.humidity
-                    var day4windspeed = data1.list[4].wind.speed
-                    var iconcode4 = data1.list[4].weather[0].icon;
+                    var day4temp = data1.list[28].main.temp
+                    var day4humidity = data1.list[28].main.humidity
+                    var day4windspeed = data1.list[28].wind.speed
+                    var iconcode4 = data1.list[28].weather[0].icon;
                     var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
                     $('#wicon4').attr('src', iconurl4);
                             
-
-                    $("#day4").html(day4temp + day3date +day4humidity + day4windspeed)
+                    $("#day4temp").html(day4temp + "°F")
+                    $("#day4date").html(day4date)
+                    $("#day4humidity").html("Humidity = " + day4humidity + "%")
           // day 5:
-                    const date5 = new Date(data1.list[5].dt_txt)
+                    const date5 = new Date(data1.list[36].dt_txt)
                     const dateTimeFormat5 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month5 },,{ value: day5 },,{ value: year5 }] = dateTimeFormat5 .formatToParts(date5 ) 
     
                     console.log(`${day5}-${month5}-${year5}`)
-                    var day5date = `${day5}👠${month5}👢${year5}`  
+                    var day5date = `${day5}/${month5}/${year5}`  
 
                         
                             
                             
-                    var day5temp = data1.list[5].main.temp
-                    var day5humidity = data1.list[5].main.humidity
-                    var day5windspeed = data1.list[5].wind.speed
-                    var iconcode5 = data1.list[5].weather[0].icon;
+                    var day5temp = data1.list[36].main.temp
+                    var day5humidity = data1.list[36].main.humidity
+                    var day5windspeed = data1.list[36].wind.speed
+                    var iconcode5 = data1.list[36].weather[0].icon;
                     var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
                     $('#wicon5').attr('src', iconurl5);
                             
-
-                    $("#day5").html(day5temp + day5date +day5humidity + day5windspeed)
-                            
+                    $("#day5temp").html(day5temp + "°F")
+                    $("#day5date").html(day5date)
+                    $("#day5humidity").html("Humidity = " + day5humidity + "%")
                             
                         }
                     })
@@ -318,12 +334,14 @@ $('#submit').click (function() {
                     var daywindspeed = data.wind.speed
                     var iconcode = data.weather[0].icon;
                     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-                    $('#wicon1').attr('src', iconurl);
+                    $('#wicon').attr('src', iconurl);
                         
 
-                    $("#show").html(daytemp + formattedTime + name +dayhumidity + daywindspeed)
-                }).then(function(data3) {
-                        console.log(latitude)
+                    $("#daytemp").html(daytemp + "°F")
+                        $("#name").html(name)
+                        $("#daydate").html(formattedTime)
+                        $("#dayhumidity").html("Humidity = " + dayhumidity + "%")
+                        $("#daywindspeed").html("Windspeed = " + daywindspeed + "MPH")
                         
                     // ajax call for UVI index   
                     $.ajax ({
@@ -364,10 +382,10 @@ $('#submit').click (function() {
         //day 1:
                     const date1 = new Date(data1.list[1].dt_txt)
                     const dateTimeFormat1 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
-                    const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat1 .formatToParts(date1 ) 
+                    const [{ value: month1 },,{ value: day1 },,{ value: year1 }] = dateTimeFormat1 .formatToParts(date1 ) 
     
-                    console.log(`${day}-${month}-${year }`)
-                    var day1date = `${day}👠${month}👢${year}`  
+                    console.log(`${day1}-${month1}-${year1 }`)
+                    var day1date = `${day1}/${month1}/${year1}`  
 
                         
                             
@@ -380,88 +398,97 @@ $('#submit').click (function() {
                     $('#wicon1').attr('src', iconurl1);
                             
 
-                    $("#day1").html(day1temp + day1date +day1humidity + day1windspeed)
+                    $("#day1temp").html(day1temp + "°F")
+                    $("#day1date").html(day1date)
+                    $("#day1humidity").html("Humidity = " + day1humidity + "%")
         // day 2:  
-                    const date2 = new Date(data1.list[2].dt_txt)
+                    const date2 = new Date(data1.list[12].dt_txt)
                     const dateTimeFormat2 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month2 },,{ value: day2 },,{ value: year2 }] = dateTimeFormat2 .formatToParts(date2 ) 
     
                     console.log(`${day2}-${month2}-${year2 }`)
-                    var day2date = `${day2}👠${month2}👢${year2}`  
+                    var day2date = `${day2}/${month2}/${year2}`  
 
                         
                             
                             
-                    var day2temp = data1.list[2].main.temp
-                    var day2humidity = data1.list[2].main.humidity
-                    var day2windspeed = data1.list[2].wind.speed
-                    var iconcode2 = data1.list[2].weather[0].icon;
+                    var day2temp = data1.list[12].main.temp
+                    var day2humidity = data1.list[12].main.humidity
+                    var day2windspeed = data1.list[12].wind.speed
+                    var iconcode2 = data1.list[12].weather[0].icon;
                     var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
                     $('#wicon2').attr('src', iconurl2);
                             
 
-                    $("#day2").html(day2temp + day2date +day2humidity + day2windspeed)
+                    $("#day2temp").html(day2temp + "°F")
+                    $("#day2date").html(day2date)
+                    $("#day2humidity").html("Humidity = " + day2humidity + "%")
         // day 3:
-                    const date3 = new Date(data1.list[3].dt_txt)
+                    const date3 = new Date(data1.list[20].dt_txt)
                     const dateTimeFormat3 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month3 },,{ value: day3 },,{ value: year3 }] = dateTimeFormat3 .formatToParts(date3 ) 
     
                     console.log(`${day3}-${month3}-${year3}`)
-                    var day3date = `${day3}👠${month3}👢${year3}`  
+                    var day3date = `${day3}/${month3}/${year3}`  
 
                         
                             
                             
-                    var day3temp = data1.list[3].main.temp
-                    var day3humidity = data1.list[3].main.humidity
-                    var day3windspeed = data1.list[3].wind.speed
-                    var iconcode3 = data1.list[3].weather[0].icon;
+                    var day3temp = data1.list[20].main.temp
+                    var day3humidity = data1.list[20].main.humidity
+                    var day3windspeed = data1.list[20].wind.speed
+                    var iconcode3 = data1.list[20].weather[0].icon;
                     var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
                     $('#wicon3').attr('src', iconurl3);
                             
 
-                    $("#day3").html(day3temp + day3date +day3humidity + day3windspeed)
+                    $("#day3temp").html(day3temp + "°F")
+                    $("#day3date").html(day3date)
+                    $("#day3humidity").html("Humidity = " + day3humidity + "%")
           // day 4:
-                    const date4 = new Date(data1.list[4].dt_txt)
+                    const date4 = new Date(data1.list[28].dt_txt)
                     const dateTimeFormat4 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month4 },,{ value: day4 },,{ value: year4 }] = dateTimeFormat4 .formatToParts(date4 ) 
     
                     console.log(`${day4}-${month4}-${year4}`)
-                    var day4date = `${day4}👠${month4}👢${year4}`  
+                    var day4date = `${day4}/${month4}/${year4}`  
 
                         
                             
                             
-                    var day4temp = data1.list[4].main.temp
-                    var day4humidity = data1.list[4].main.humidity
-                    var day4windspeed = data1.list[4].wind.speed
-                    var iconcode4 = data1.list[4].weather[0].icon;
+                    var day4temp = data1.list[28].main.temp
+                    var day4humidity = data1.list[28].main.humidity
+                    var day4windspeed = data1.list[28].wind.speed
+                    var iconcode4 = data1.list[28].weather[0].icon;
                     var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
                     $('#wicon4').attr('src', iconurl4);
                             
 
-                    $("#day4").html(day4temp + day3date +day4humidity + day4windspeed)
+                    $("#day4temp").html(day4temp + "°F")
+                    $("#day4date").html(day4date)
+                    $("#day4humidity").html("Humidity = " + day4humidity + "%")
           // day 5:
-                    const date5 = new Date(data1.list[5].dt_txt)
+                    const date5 = new Date(data1.list[36].dt_txt)
                     const dateTimeFormat5 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month5 },,{ value: day5 },,{ value: year5 }] = dateTimeFormat5 .formatToParts(date5 ) 
     
                     console.log(`${day5}-${month5}-${year5}`)
-                    var day5date = `${day5}👠${month5}👢${year5}`  
+                    var day5date = `${day5}/${month5}/${year5}`  
 
                         
                             
                             
-                    var day5temp = data1.list[5].main.temp
-                    var day5humidity = data1.list[5].main.humidity
-                    var day5windspeed = data1.list[5].wind.speed
-                    var iconcode5 = data1.list[5].weather[0].icon;
+                    var day5temp = data1.list[36].main.temp
+                    var day5humidity = data1.list[36].main.humidity
+                    var day5windspeed = data1.list[36].wind.speed
+                    var iconcode5 = data1.list[36].weather[0].icon;
                     var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
                     $('#wicon5').attr('src', iconurl5);
                             
 
-                    $("#day5").html(day5temp + day5date +day5humidity + day5windspeed)
-                            
+                    $("#day5temp").html(day5temp + "°F")
+                    $("#day5date").html(day5date)
+                    $("#day5humidity").html("Humidity = " + day5humidity + "%")
                             
                         }
                     })
@@ -593,10 +620,14 @@ $('.saved').click (function() {
                     var daywindspeed = data.wind.speed
                     var iconcode = data.weather[0].icon;
                     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-                    $('#wicon1').attr('src', iconurl);
+                    $('#wicon').attr('src', iconurl);
                         
 
-                    $("#show").html(daytemp + formattedTime + name +dayhumidity + daywindspeed)
+                    $("#daytemp").html(daytemp + "°F")
+                    $("#name").html(name)
+                    $("#daydate").html(formattedTime)
+                    $("#dayhumidity").html("Humidity = " + dayhumidity + "%")
+                    $("#daywindspeed").html("Windspeed = " + daywindspeed + "MPH")
                 }).then(function(data3) {
                         console.log(latitude)
                         
@@ -642,7 +673,7 @@ $('.saved').click (function() {
                     const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat1 .formatToParts(date1 ) 
     
                     console.log(`${day}-${month}-${year }`)
-                    var day1date = `${day}👠${month}👢${year}`  
+                    var day1date = `${day}/${month}/${year}`  
 
                         
                             
@@ -654,90 +685,97 @@ $('.saved').click (function() {
                     var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
                     $('#wicon1').attr('src', iconurl1);
                             
-
-                    $("#day1").html(day1temp + day1date +day1humidity + day1windspeed)
+                    $("#day1temp").html(day1temp + "°F")
+                    $("#day1date").html(day1date)
+                    $("#day1humidity").html("Humidity = " + day1humidity + "%")
         // day 2:  
-                    const date2 = new Date(data1.list[2].dt_txt)
+                    const date2 = new Date(data1.list[12].dt_txt)
                     const dateTimeFormat2 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month2 },,{ value: day2 },,{ value: year2 }] = dateTimeFormat2 .formatToParts(date2 ) 
     
                     console.log(`${day2}-${month2}-${year2 }`)
-                    var day2date = `${day2}👠${month2}👢${year2}`  
+                    var day2date = `${day2}/${month2}/${year2}`  
 
                         
                             
                             
-                    var day2temp = data1.list[2].main.temp
-                    var day2humidity = data1.list[2].main.humidity
-                    var day2windspeed = data1.list[2].wind.speed
-                    var iconcode2 = data1.list[2].weather[0].icon;
+                    var day2temp = data1.list[12].main.temp
+                    var day2humidity = data1.list[12].main.humidity
+                    var day2windspeed = data1.list[12].wind.speed
+                    var iconcode2 = data1.list[12].weather[0].icon;
                     var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
                     $('#wicon2').attr('src', iconurl2);
                             
 
-                    $("#day2").html(day2temp + day2date +day2humidity + day2windspeed)
+                    $("#day2temp").html(day2temp + "°F")
+                    $("#day2date").html(day2date)
+                    $("#day2humidity").html("Humidity = " + day2humidity + "%")
         // day 3:
-                    const date3 = new Date(data1.list[3].dt_txt)
+                    const date3 = new Date(data1.list[20].dt_txt)
                     const dateTimeFormat3 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month3 },,{ value: day3 },,{ value: year3 }] = dateTimeFormat3 .formatToParts(date3 ) 
     
                     console.log(`${day3}-${month3}-${year3}`)
-                    var day3date = `${day3}👠${month3}👢${year3}`  
+                    var day3date = `${day3}/${month3}/${year3}`  
 
                         
                             
                             
-                    var day3temp = data1.list[3].main.temp
-                    var day3humidity = data1.list[3].main.humidity
-                    var day3windspeed = data1.list[3].wind.speed
-                    var iconcode3 = data1.list[3].weather[0].icon;
+                    var day3temp = data1.list[20].main.temp
+                    var day3humidity = data1.list[20].main.humidity
+                    var day3windspeed = data1.list[20].wind.speed
+                    var iconcode3 = data1.list[20].weather[0].icon;
                     var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
                     $('#wicon3').attr('src', iconurl3);
                             
 
-                    $("#day3").html(day3temp + day3date +day3humidity + day3windspeed)
+                    $("#day3temp").html(day3temp + "°F")
+                    $("#day3date").html(day3date)
+                    $("#day3humidity").html("Humidity = " + day3humidity + "%")
           // day 4:
-                    const date4 = new Date(data1.list[4].dt_txt)
+                    const date4 = new Date(data1.list[28].dt_txt)
                     const dateTimeFormat4 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month4 },,{ value: day4 },,{ value: year4 }] = dateTimeFormat4 .formatToParts(date4 ) 
     
                     console.log(`${day4}-${month4}-${year4}`)
-                    var day4date = `${day4}👠${month4}👢${year4}`  
+                    var day4date = `${day4}/${month4}/${year4}`  
 
                         
                             
                             
-                    var day4temp = data1.list[4].main.temp
-                    var day4humidity = data1.list[4].main.humidity
-                    var day4windspeed = data1.list[4].wind.speed
-                    var iconcode4 = data1.list[4].weather[0].icon;
+                    var day4temp = data1.list[28].main.temp
+                    var day4humidity = data1.list[28].main.humidity
+                    var day4windspeed = data1.list[28].wind.speed
+                    var iconcode4 = data1.list[28].weather[0].icon;
                     var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
                     $('#wicon4').attr('src', iconurl4);
                             
 
-                    $("#day4").html(day4temp + day3date +day4humidity + day4windspeed)
+                    $("#day4temp").html(day4temp + "°F")
+                    $("#day4date").html(day4date)
+                    $("#day4humidity").html("Humidity = " + day4humidity + "%")
           // day 5:
-                    const date5 = new Date(data1.list[5].dt_txt)
+                    const date5 = new Date(data1.list[36].dt_txt)
                     const dateTimeFormat5 = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
                     const [{ value: month5 },,{ value: day5 },,{ value: year5 }] = dateTimeFormat5 .formatToParts(date5 ) 
     
                     console.log(`${day5}-${month5}-${year5}`)
-                    var day5date = `${day5}👠${month5}👢${year5}`  
+                    var day5date = `${day5}/${month5}/${year5}`  
 
                         
                             
                             
-                    var day5temp = data1.list[5].main.temp
-                    var day5humidity = data1.list[5].main.humidity
-                    var day5windspeed = data1.list[5].wind.speed
-                    var iconcode5 = data1.list[5].weather[0].icon;
+                    var day5temp = data1.list[36].main.temp
+                    var day5humidity = data1.list[36].main.humidity
+                    var day5windspeed = data1.list[36].wind.speed
+                    var iconcode5 = data1.list[36].weather[0].icon;
                     var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
                     $('#wicon5').attr('src', iconurl5);
                             
 
-                    $("#day5").html(day5temp + day5date +day5humidity + day5windspeed)
-                            
-                            
+                    $("#day5temp").html(day5temp + "°F")
+                    $("#day5date").html(day5date)
+                    $("#day5humidity").html("Humidity = " + day5humidity + "%")
                         }
                     })
                     
@@ -774,7 +812,7 @@ $('.saved').click (function() {
                         const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat .formatToParts(date ) 
 
                         console.log(`${day}-${month}-${year }`)
-                        var today = `${day}👠${month}👢${year}`            
+                        var today = `${day}/${month}/${year}`            
                         //tomorrow         
                         return "<h3>" + today +"<h3>" +
                                 "<h3>" + data1.city.name +"<h3>" +
@@ -825,8 +863,3 @@ function show2 (data1) {
 // run this function whe user clicks previously searched city
 });
 
-$('.todaysaved').click(function()  {
-
-    consolelog(this.id);
-    prompt(hello)
-})

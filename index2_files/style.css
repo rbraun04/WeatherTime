@@ -1,0 +1,245 @@
+.welcome {
+    color: rgb(186, 148, 32);
+    background-color: transparent; 
+    letter-spacing: 10px;
+    font: 400 24px/1.8 "Lato", sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+
+.logo {
+    float: center;
+}
+
+.section {
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.AddressHeader {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: #564c4c64;
+    letter-spacing: 10px;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    text-align: center; 
+    margin-top: 100px; 
+    opacity: .9; 
+}
+.AddressHeader2 {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgb(83, 74, 74, .4);
+    letter-spacing: 10px;
+    font: 400 25px/1.8 "Lato", sans-serif;
+    text-align: center; 
+    margin-top: 50px;  
+}
+
+
+
+
+
+.firstQuestions {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgba(33, 24, 24, 0.8);
+    letter-spacing: 10px;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    text-align: center;
+    margin-top: 100px;   
+}
+
+.hikeQuestions {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgba(33, 24, 24, 0.8);
+    letter-spacing: 10px;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+
+}
+.hikesubmitQuestions {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgba(33, 24, 24, 0.8);
+    letter-spacing: 10px;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    text-align: right;
+    margin-top: 25px;
+
+}
+
+
+
+.navbar-brand {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 10px;
+    font: 400 16px/1.8 "Lato", sans-serif;
+    text-align: left;  
+}
+
+body, html {
+    height: 100%;
+}
+
+.container-fluid {
+    /* The image used */
+    
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-fluid-starting {
+    /* The image used */
+
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-fluid2 {
+    /* The image used */
+    
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.center-text {
+    margin-top: 100px;
+}
+
+.text-center {
+    color: white;
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 10px;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    float: center;
+    background-color: rgb(149, 91, 71);
+}
+
+.card1 {
+    background-color: transparent;
+    float: center;
+}
+
+.card-text {
+    color: white;
+    letter-spacing: 10px;
+    font: 400 12px/1.8 "Lato", sans-serif;
+    text-align:center;
+}
+
+
+
+.contact {
+    color: white;
+    font-weight: bolder;
+    background-color: transparent;
+    width: 200px;
+    padding: 18px; 
+    letter-spacing: 10px;
+    font: 400 20px/1.8 "Lato", sans-serif;
+    text-align: left;
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 734px) {
+
+    .container-fluid {
+        /* The image used */
+        
+        height: auto;
+    
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    
+
+.firstQuestions {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgba(33, 24, 24, 0.8);
+    letter-spacing: 3px;
+    font: 400 12px/1.8 "Lato", sans-serif;
+    text-align: center;
+    
+    
+    
+}
+.AddressHeader {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgb(83, 74, 74, .4);
+    letter-spacing: 10px;
+    font: 400 14px/1.8 "Lato", sans-serif;
+    text-align: center;   
+}
+
+.AddressHeader2 {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgb(83, 74, 74, .4);
+    letter-spacing: 10px;
+    font: 400 14px/1.8 "Lato", sans-serif;
+    text-align: center; 
+    margin-top: 10px;  
+}
+.hikesubmitQuestions {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgb(83, 74, 74, .4);
+    letter-spacing: 10px;
+    font: 400 14px/1.8 "Lato", sans-serif;
+    text-align: center; 
+    margin-top: 10px; 
+
+}
+.hikeQuestions {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgba(33, 24, 24, 0.8);
+    letter-spacing: 10px;
+    font: 400 14px/1.8 "Lato", sans-serif;
+    text-align: center; 
+    margin-top: 25px; 
+
+}
+.navbar-brand {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 3px;
+    font: 100 1px/.5 "Lato", sans-serif;
+    text-align: left;  
+}
+}

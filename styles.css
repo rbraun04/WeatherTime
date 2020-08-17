@@ -1,0 +1,50 @@
+.section {
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.brand {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 10px;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    text-align: center;  
+}
+
+.search {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 5px;
+    font: 400 18px/1.8 "Lato", sans-serif;
+    text-align: center;  
+    margin-top: 35px;
+    opacity: .8;
+}
+
+.card-body1 {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 10px;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    text-align: center; 
+
+
+}
+
+.card-body2 {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 2px;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    text-align: center; 
+
+
+}
