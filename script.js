@@ -24,7 +24,7 @@
                 
                 
                 $.ajax ({
-                    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + searchElem[0] + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                    url: 'https://api.openweathermap.org/data/2.5/weather?q=' + searchElem[0] + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                     type: "GET",
                     dataType:"jsonp",
 
@@ -55,7 +55,7 @@
                         var dayhumidity = data.main.humidity
                         var daywindspeed = data.wind.speed
                         var iconcode = data.weather[0].icon;
-                        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#wicon').attr('src', iconurl);
                             
 
@@ -72,7 +72,7 @@
                         
                     // ajax call for UVI index   
                     $.ajax ({
-                        url: 'http://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
+                        url: 'https://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
                         
                         type: "GET",
                         dataType:"json",
@@ -105,7 +105,7 @@
 
                     //ajax call for 5 day forecast
                     $.ajax ({
-                        url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + searchElem[0] + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchElem[0] + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                         type: "GET",
                         dataType:"jsonp",
                         success : function (data1) {
@@ -131,7 +131,7 @@
                     var day1humidity = data1.list[1].main.humidity
                     var day1windspeed = data1.list[1].wind.speed
                     var iconcode1 = data1.list[1].weather[0].icon;
-                    var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+                    var iconurl1 = "https://openweathermap.org/img/w/" + iconcode1 + ".png";
                     $('#wicon1').attr('src', iconurl1);
                             
 
@@ -155,7 +155,7 @@
                     var day2humidity = data1.list[12].main.humidity
                     var day2windspeed = data1.list[12].wind.speed
                     var iconcode2 = data1.list[12].weather[0].icon;
-                    var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+                    var iconurl2 = "https://openweathermap.org/img/w/" + iconcode2 + ".png";
                     $('#wicon2').attr('src', iconurl2);
                             
 
@@ -178,7 +178,7 @@
                     var day3humidity = data1.list[20].main.humidity
                     var day3windspeed = data1.list[20].wind.speed
                     var iconcode3 = data1.list[20].weather[0].icon;
-                    var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+                    var iconurl3 = "https://openweathermap.org/img/w/" + iconcode3 + ".png";
                     $('#wicon3').attr('src', iconurl3);
                             
 
@@ -200,7 +200,7 @@
                     var day4humidity = data1.list[28].main.humidity
                     var day4windspeed = data1.list[28].wind.speed
                     var iconcode4 = data1.list[28].weather[0].icon;
-                    var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+                    var iconurl4 = "https://openweathermap.org/img/w/" + iconcode4 + ".png";
                     $('#wicon4').attr('src', iconurl4);
                             
                     $("#day4temp").html(day4temp + "°F")
@@ -221,7 +221,7 @@
                     var day5humidity = data1.list[36].main.humidity
                     var day5windspeed = data1.list[36].wind.speed
                     var iconcode5 = data1.list[36].weather[0].icon;
-                    var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
+                    var iconurl5 = "https://openweathermap.org/img/w/" + iconcode5 + ".png";
                     $('#wicon5').attr('src', iconurl5);
                             
                     $("#day5temp").html(day5temp + "°F")
@@ -236,7 +236,7 @@
                         latitude= data.coord.lat
                         longitude = data.coord.lon
                         var iconcode = data.weather[0].icon;
-                        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#wicon').attr('src', iconurl);
                         
                     
@@ -317,7 +317,7 @@ $('#submit').click (function() {
             if (city !== '') {
                 var a = $(".saved");
                 $.ajax ({
-                    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                    url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                     type: "GET",
                     dataType:"jsonp",
                 }).then(function (data) {
@@ -346,7 +346,7 @@ $('#submit').click (function() {
                     var dayhumidity = data.main.humidity
                     var daywindspeed = data.wind.speed
                     var iconcode = data.weather[0].icon;
-                    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
                     $('#wicon').attr('src', iconurl);
                         
 
@@ -358,7 +358,7 @@ $('#submit').click (function() {
                         
                     // ajax call for UVI index   
                     $.ajax ({
-                        url: 'http://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
+                        url: 'https://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
                         
                         type: "GET",
                         dataType:"json",
@@ -391,7 +391,7 @@ $('#submit').click (function() {
 
                     //ajax call for 5 day forecast
                     $.ajax ({
-                        url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                         type: "GET",
                         dataType:"jsonp",
                         success : function (data1) {
@@ -420,7 +420,7 @@ $('#submit').click (function() {
                     var day1humidity = data1.list[1].main.humidity
                     var day1windspeed = data1.list[1].wind.speed
                     var iconcode1 = data1.list[1].weather[0].icon;
-                    var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+                    var iconurl1 = "https://openweathermap.org/img/w/" + iconcode1 + ".png";
                     $('#wicon1').attr('src', iconurl1);
                             
 
@@ -442,7 +442,7 @@ $('#submit').click (function() {
                     var day2humidity = data1.list[12].main.humidity
                     var day2windspeed = data1.list[12].wind.speed
                     var iconcode2 = data1.list[12].weather[0].icon;
-                    var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+                    var iconurl2 = "https://openweathermap.org/img/w/" + iconcode2 + ".png";
                     $('#wicon2').attr('src', iconurl2);
                             
 
@@ -464,7 +464,7 @@ $('#submit').click (function() {
                     var day3humidity = data1.list[20].main.humidity
                     var day3windspeed = data1.list[20].wind.speed
                     var iconcode3 = data1.list[20].weather[0].icon;
-                    var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+                    var iconurl3 = "https://openweathermap.org/img/w/" + iconcode3 + ".png";
                     $('#wicon3').attr('src', iconurl3);
                             
 
@@ -486,7 +486,7 @@ $('#submit').click (function() {
                     var day4humidity = data1.list[28].main.humidity
                     var day4windspeed = data1.list[28].wind.speed
                     var iconcode4 = data1.list[28].weather[0].icon;
-                    var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+                    var iconurl4 = "https://openweathermap.org/img/w/" + iconcode4 + ".png";
                     $('#wicon4').attr('src', iconurl4);
                             
 
@@ -508,7 +508,7 @@ $('#submit').click (function() {
                     var day5humidity = data1.list[36].main.humidity
                     var day5windspeed = data1.list[36].wind.speed
                     var iconcode5 = data1.list[36].weather[0].icon;
-                    var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
+                    var iconurl5 = "https://openweathermap.org/img/w/" + iconcode5 + ".png";
                     $('#wicon5').attr('src', iconurl5);
                             
 
@@ -524,7 +524,7 @@ $('#submit').click (function() {
                         latitude= data.coord.lat
                         longitude = data.coord.lon
                         var iconcode = data.weather[0].icon;
-                        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#wicon').attr('src', iconurl);
                         
                     
@@ -578,7 +578,7 @@ function show (data) {
     latitude= data.coord.lat
     longitude = data.coord.lon
     var iconcode = data.weather[0].icon;
-    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     $('#wicon').attr('src', iconurl);
 
     return "<h3><strong>Weather</strong>: " + data.weather[0].main +"<h3>" +
@@ -616,7 +616,7 @@ $('.saved').click (function() {
         
             if (city !== '') {
                 $.ajax ({
-                    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                    url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                     type: "GET",
                     dataType:"jsonp",
                 }).then(function (data) {
@@ -645,7 +645,7 @@ $('.saved').click (function() {
                     var dayhumidity = data.main.humidity
                     var daywindspeed = data.wind.speed
                     var iconcode = data.weather[0].icon;
-                    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
                     $('#wicon').attr('src', iconurl);
                         
 
@@ -659,7 +659,7 @@ $('.saved').click (function() {
                         
                     // ajax call for UVI index   
                     $.ajax ({
-                        url: 'http://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
+                        url: 'https://api.openweathermap.org/data/2.5/uvi?appid=2e7712007ae88c6a7b26e1e008ca4659' + '&lon=' + longitude + '&lat=' + latitude,
                         
                         type: "GET",
                         dataType:"json",
@@ -693,7 +693,7 @@ $('.saved').click (function() {
 
                     //ajax call for 5 day forecast
                     $.ajax ({
-                        url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
+                        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&units=imperial" + "&APPID=2e7712007ae88c6a7b26e1e008ca4659",
                         type: "GET",
                         dataType:"jsonp",
                         success : function (data1) {
@@ -722,7 +722,7 @@ $('.saved').click (function() {
                     var day1humidity = data1.list[1].main.humidity
                     var day1windspeed = data1.list[1].wind.speed
                     var iconcode1 = data1.list[1].weather[0].icon;
-                    var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+                    var iconurl1 = "https://openweathermap.org/img/w/" + iconcode1 + ".png";
                     $('#wicon1').attr('src', iconurl1);
                             
                     $("#day1temp").html(day1temp + "°F")
@@ -743,7 +743,7 @@ $('.saved').click (function() {
                     var day2humidity = data1.list[12].main.humidity
                     var day2windspeed = data1.list[12].wind.speed
                     var iconcode2 = data1.list[12].weather[0].icon;
-                    var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+                    var iconurl2 = "https://openweathermap.org/img/w/" + iconcode2 + ".png";
                     $('#wicon2').attr('src', iconurl2);
                             
 
@@ -765,7 +765,7 @@ $('.saved').click (function() {
                     var day3humidity = data1.list[20].main.humidity
                     var day3windspeed = data1.list[20].wind.speed
                     var iconcode3 = data1.list[20].weather[0].icon;
-                    var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+                    var iconurl3 = "https://openweathermap.org/img/w/" + iconcode3 + ".png";
                     $('#wicon3').attr('src', iconurl3);
                             
 
@@ -787,7 +787,7 @@ $('.saved').click (function() {
                     var day4humidity = data1.list[28].main.humidity
                     var day4windspeed = data1.list[28].wind.speed
                     var iconcode4 = data1.list[28].weather[0].icon;
-                    var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+                    var iconurl4 = "https://openweathermap.org/img/w/" + iconcode4 + ".png";
                     $('#wicon4').attr('src', iconurl4);
                             
 
@@ -809,7 +809,7 @@ $('.saved').click (function() {
                     var day5humidity = data1.list[36].main.humidity
                     var day5windspeed = data1.list[36].wind.speed
                     var iconcode5 = data1.list[36].weather[0].icon;
-                    var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
+                    var iconurl5 = "https://openweathermap.org/img/w/" + iconcode5 + ".png";
                     $('#wicon5').attr('src', iconurl5);
                             
 
@@ -824,7 +824,7 @@ $('.saved').click (function() {
                         latitude= data.coord.lat
                         longitude = data.coord.lon
                         var iconcode = data.weather[0].icon;
-                        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#wicon').attr('src', iconurl);
                         
                     
@@ -878,7 +878,7 @@ function show (data) {
     latitude= data.coord.lat
     longitude = data.coord.lon
     var iconcode = data.weather[0].icon;
-    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     $('#wicon').attr('src', iconurl);
 
     return "<h3><strong>Weather</strong>: " + data.weather[0].main +"<h3>" +
