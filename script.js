@@ -576,32 +576,7 @@ $('#submit').click (function(event) {
 
 
 
-function show (data) {
-    latitude= data.coord.lat
-    longitude = data.coord.lon
-    var iconcode = data.weather[0].icon;
-    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    $('#wicon').attr('src', iconurl);
 
-    return "<h3><strong>Weather</strong>: " + data.weather[0].main +"<h3>" +
-    "<h3><strong>Location</strong>: " + data.name +"<h3>" +
-    "<h3><strong>Date</strong>: " + data.weather[0].main +"<h3>" +
-    "<h3><strong>Temperature</strong>: " + data.weather[0].main +"<h3>" +
-    "<h3><strong>Humidity</strong>: " + data.weather[0].main +"<h3>" +
-            "<h3><strong>Wind Speed</strong>: " + data.weather[0].description +"<h3>" +
-            "<h3><strong>UV Index</strong>: " + data.weather[0].main +"<h3>";
-    }
-
-               
-            
-function show2 (data1) {           
-    return "<h3><strong>Weather</strong>: " + data1.list[0].weather[0].main +"<h3>" +
-            "<h3><strong>Description</strong>: " + data1.list[0].description +"<h3>" +
-            "<h3><strong>Temperature</strong>: " + data1.list[0].main +"<h3>";
-            console.log(data1)
-           
-    }
- 
 // run this function whe user clicks previously searched city
 });
 
@@ -818,86 +793,20 @@ $(document).on ("click",".saved", function() {
                     })
                     
                 
-                    function show (data) {
-                        latitude= data.coord.lat
-                        longitude = data.coord.lon
-                        var iconcode = data.weather[0].icon;
-                        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
-                        $('#wicon').attr('src', iconurl);
-                        
                     
-                        return "<h3><strong>Weather</strong>: " + data.weather[0].main +"<h3>" +
-                        "<h3><strong>Location</strong>: " + data.name +"<h3>" +
-                        "<h3><strong>Date</strong>: " + data.weather[0].main +"<h3>" +
-                        "<h3><strong>Temperature</strong>: " + data.weather[0].main +"<h3>" +
-                        "<h3><strong>Humidity</strong>: " + data.weather[0].main +"<h3>" +
-                        "<h3><strong>Wind Speed</strong>: " + data.weather[0].description +"<h3>" +
-                        "<h3><strong>UV Index</strong>: " + data.weather[0].main +"<h3>";
-                        }
-                    
-                    function show3 (data2) {
-                        return "<h3><strong>UV Index:" + data2.value;
-                    }
-
                                    
                                 
-                    function show2 (data1) { 
-
-                        console.log(data1)
-                        
-                        const date = new Date(data1.list[0].dt_txt)
-                        const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) 
-                        const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat .formatToParts(date ) 
-
-                        console.log(`${day}-${month}-${year }`)
-                        var today = `${day}/${month}/${year}`            
-                        //tomorrow         
-                        return "<h3>" + today +"<h3>" +
-                                "<h3>" + data1.city.name +"<h3>" +
-                                "<h3><strong>Temperature</strong>: " + data1.list[0].main.temp + "°F" + "<h3>" +
-                                "<h3><strong>Humidity</strong>: " + data1.list[0].main.humidity + "°F" + "<h3>" +
-                                "<h3><strong>Wind Speed</strong>: " + data1.list[0].wind.speed + "°F" + "<h3>";
-
-                                // console.log(data1)
-                        
-                               
-                        }
-                }else{
-                    $("#error").html('Field cannot be empty');
-
                     
                 }
-                
 
 
 
 
-function show (data) {
-    latitude= data.coord.lat
-    longitude = data.coord.lon
-    var iconcode = data.weather[0].icon;
-    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    $('#wicon').attr('src', iconurl);
 
-    return "<h3><strong>Weather</strong>: " + data.weather[0].main +"<h3>" +
-    "<h3><strong>Location</strong>: " + data.name +"<h3>" +
-    "<h3><strong>Date</strong>: " + data.weather[0].main +"<h3>" +
-    "<h3><strong>Temperature</strong>: " + data.weather[0].main +"<h3>" +
-    "<h3><strong>Humidity</strong>: " + data.weather[0].main +"<h3>" +
-            "<h3><strong>Wind Speed</strong>: " + data.weather[0].description +"<h3>" +
-            "<h3><strong>UV Index</strong>: " + data.weather[0].main +"<h3>";
-    }
 
                
             
-function show2 (data1) {           
-    return "<h3><strong>Weather</strong>: " + data1.list[0].weather[0].main +"<h3>" +
-            "<h3><strong>Description</strong>: " + data1.list[0].description +"<h3>" +
-            "<h3><strong>Temperature</strong>: " + data1.list[0].main +"<h3>";
-            console.log(data1)
-           
-    }
- 
+
 // run this function whe user clicks previously searched city
 });
 
