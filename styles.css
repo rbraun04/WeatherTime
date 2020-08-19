@@ -17,6 +17,18 @@
       
 }
 
+.location {
+    color: rgb(154, 140, 197);
+    font-weight: bolder;
+    background-color: transparent;
+    letter-spacing: 20px;
+    font-family: 'Cormorant', serif;
+    text-align: center;
+    font-size:  35px;
+
+}
+
+
 .search {
     color: rgb(255, 255, 255);
     font-weight: bolder;
@@ -31,10 +43,11 @@
 .card-body1 {
     color: rgb(255, 255, 255);
     font-weight: bolder;
-    background-color: rgba(127, 95, 95, 0.3);
-    letter-spacing: 8px;
-    font: 400 24px/1.8 "Lato", sans-serif;
+    background-color: rgba(20, 17, 17, 0.4);
+    letter-spacing: 4px;
+    font: 400 18px/1.8 "Lato", sans-serif;
     text-align: center; 
+    
 
 
 }
@@ -50,7 +63,7 @@
 .card-body2 {
     color: rgb(255, 255, 255);
     font-weight: bolder;
-    background-color: rgba(55, 28, 28, 0.9);
+    background-color: transparent;
     letter-spacing: 2px;
     font: 400 15px/1.8 "Lato", sans-serif;
     text-align: center; 
