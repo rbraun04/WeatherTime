@@ -301,8 +301,11 @@ $('#submit').click (function(event) {
         event.preventDefault();
 
         searchElem = JSON.parse(localStorage.getItem("User"))
+            if (searchElem !== null) {
+                searchElem.push(cityElem.value)
+            }
 
-        searchElem.push(cityElem.value)
+        
         localStorage.setItem("User", JSON.stringify(searchElem));
         $(".searchhistory").append("<div><a class = 'saved' id='" + cityElem.value + "'> " + cityElem.value +  "</a></div>");
         
